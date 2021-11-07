@@ -40,14 +40,17 @@ function App() {
     </div>
   );
 }
-function Place(props: {
+
+interface PlaceProps {
   title: string;
   placeName: string;
   country: string;
   description: string;
   mapURL: string;
   imageURL: string;
-}) {
+}
+
+function Place(props: PlaceProps) {
   return (
     <div className="place">
       <img src={props.imageURL} className="main-image" alt={props.title} />
